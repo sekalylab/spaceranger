@@ -1,0 +1,19 @@
+{
+    "jobName": "cellranger-job-TIMESTAMP", 
+    "jobQueue": "gsea-job-queue-3", 
+    "jobDefinition": "spaceranger-job-def-1",
+    "arrayProperties": {
+	"size": "NSAMPLE"
+    },
+    "containerOverrides": {
+	"command": [
+	    "bash",
+	    "/mnt/spaceranger.sh",
+	    "-d","DIRDATA",
+	    "-g","GENOME"
+        ]
+    },
+    "timeout": {
+        "attemptDurationSeconds": 7200
+    }
+}
